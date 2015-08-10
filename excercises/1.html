@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<div id="result">
+
+</div>
+
+<script type="text/javascript">
+    var a = ['text1', 'a', 'b', 'aa', 'aaa'];
+    //1. TODO: sort the "a" array, and display it via console.log
+
+    var b = [
+        {
+            order: '1',
+            name: 'test1'
+        },
+        {
+            order: '11',
+            name: 'text2'
+        },
+        {
+            order: '10',
+            name: 'text33'
+        },
+        {
+            order: '111',
+            name: 'text444'
+        },
+        {
+            order: '2',
+            name: 'text 55'
+        }
+    ];
+    //2. TODO: sort the "b" array by the "order" field in each object using "natural order" sort (1,2,10,11,111 and NOT 1,10,11,111,2). Assume all order fields are numerical strings
+    // output via console.log
+
+    //3. TODO: create a "numericalSum" function which adds all numerical values from the array. The function should be applicable to all arrays (use Array.prototype)
+    // requirements: the following calls should pass and not error out
+    var testArr = [2, 3, 4, '5', 'a', 'bb', 10];
+
+    if (testArr.numericalSum() !== 24) {
+        throw new Error('Invalid result. Expected 24');
+    }
+
+    var testArr1 = ['a', 'bb', 'cc'];
+    if (testArr1.numericalSum() !== 0) {
+        throw new Error('Invalid result. Expected was 0');
+    }
+
+    var testArr2 = [];
+    testArr2.push('asd');
+    testArr2.push('2.35');
+    testArr2.push('a');
+    testArr2.push('b');
+    testArr2.push('12');
+    if (testArr2.numericalSum() !== 14.35) {
+        throw new Error('Invalid result. Expected was 14.35');
+    }
+
+    //4. TODO: create a function called testSum() which does the following:
+    // a. generates 10 arrays containing 10 random numbers from 0 to 9 (including)
+    // b. outputs each array on a separated line inside the #result div from above
+    // c. at the beginning of each line, the sum of all elements from the array that's displayed on that line, bolded (using the numericalSum function)
+
+</script>
+
+</body>
+</html>
