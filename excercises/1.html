@@ -13,8 +13,12 @@
 <div id="result-5"></div>
 
 <script type="text/javascript">
+
+    var _div = document.getElementById('result-5');
+
+
     var a = ['text1', 'a', 'b', 'aa', 'aaa'];
-    //1. TODO: sort the "a" array, and display it via console.log
+    //1. TODO: sort the "a" array, and display it via console.log (ascending)
 
     var b = [
         {
@@ -45,6 +49,10 @@
     // requirements: the following calls should pass and not error out
     var testArr = [2, 3, 4, '5', 'a', 'bb', 10];
 
+    if (typeof testArr.numericalSum !== 'function') {
+        throw new Error('numericalSum is not defined!');
+    }
+
     if (testArr.numericalSum() !== 24) {
         throw new Error('Invalid result. Expected 24');
     }
@@ -67,10 +75,12 @@
     //4. TODO: create a function called testSum() which does the following:
     // a. generates 10 arrays containing 10 random numbers from 0 to 9 (including)
     // b. outputs each array on a separated line inside the #result div from above
-    // c. at the beginning of each line, the sum of all elements from the array that's displayed on that line, bolded (using the numericalSum() function)
+    // c. at the beginning of each line, the sum of all elements from the array that's displayed on that line,
+    // bolded (using the numericalSum() function)
 
 
-    //5. TODO: create a function which returns a new object that has 100 fields, called field0 ... field99 and each field value is a random small letter (a-z)
+    //5. TODO: create a function which returns a new object that has 100 fields, called field0 ... field99
+    // and each field value is a random small letter (a-z)
     // a. the following should pass and not error out (assuming the function is called randomObject:
     var generated = randomObject();
     if (!generated || typeof generated !== 'object') {
@@ -82,7 +92,8 @@
     if (!generated[randomField] || generated[randomField] < 'a' || generated[randomField] > 'z') {
         throw new Error('Invalid field value or missing field (' + randomField + ')');
     }
-    //b. TODO: iterate over the object fields and display each value of each field into a separate <div> element inside the div#result-5 element
+    //b. TODO: iterate over the object fields and display each value of each field into a separate
+    // <div> element inside the div#result-5 element
 
 
 </script>
