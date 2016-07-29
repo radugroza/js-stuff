@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+    <style>
+        .styled {
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, .4);
+            padding: 10px;
+        }
+    </style>
+    <script>
+        //        document.getElementById( 'div1' ).style.display = 'none';
+    </script>
+</head>
+<body>
+
+<div id="div1" class="styled">This is a div</div>
+
+<div class="styled class-get">Another one</div>
+<div class="styled class-get">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, rem.</div>
+<div class="styled class-get">Lorem ipsum dolor sit amet.</div>
+<div class="styled class-get">Lorem ipsum dolor sit amet, consectetur.</div>
+<div class="styled class-get">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+<div class="styled class-get">Lorem ipsum dolor sit.</div>
+
+<p>Paragraph 1</p>
+<p>Paragraph 2</p>
+<p>Paragraph 3</p>
+<p>Paragraph 4</p>
+<p>Paragraph 5</p>
+<p>Paragraph 6</p>
+
+<button type="button" id="btn1" onclick="some_function(this)">Click me!</button>
+
+<button type="button" id="btn2">Another button</button>
+
+
+<script type="text/javascript">
+    //    document.getElementById( 'div1' ).style.color = 'blue';
+    //    document.getElementById( 'div1' ).style.border = '1px solid red';
+
+    var _list = document.getElementsByClassName( 'class-get' );
+    //    for( var i = 0; i < _list.length; i++ ) {
+    //        _list.item( i ).style.float = 'left';
+    //    }
+    var all_paragraphs = document.getElementsByTagName( 'p' );
+    console.log( all_paragraphs );
+    function some_function( btn ) {
+        btn.style.border = '2px dotted blue';
+    }
+    document.getElementById('btn2').onclick = function( e ) {
+        console.log( this, e );
+    }
+</script>
+
+</body>
+</html>
