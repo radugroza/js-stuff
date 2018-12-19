@@ -3,5 +3,6 @@ users:
   - radugroza
 
 slack_channel_hook: http://slack_channel_hook
+
 slack_handles:
   - radu
