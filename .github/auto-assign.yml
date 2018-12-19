@@ -4,5 +4,5 @@ users:
 
 slack_channel_hook: http://slack_channel_hook
 
-slack_handles:
-  - radu
+slack_user_ids:
+  - radugroza: @U054QQ00J
