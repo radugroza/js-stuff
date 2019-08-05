@@ -1,6 +1,7 @@
 # A list of reviewers to be added to pull requests (GitHub user name)
 users:
   - radugroza
+  - thrive-bot
 
 slack_channel_hook: http://slack_channel_hook
 
